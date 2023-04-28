@@ -1,0 +1,125 @@
+@media screen and (max-width: 480px){
+}
+    body{
+            margin: 0;
+            padding: 0;
+            background-color: #0b1622;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            
+            .heart{
+            height: 150px; 
+            width: 150px;
+            background-color: #f20044;
+            position: relative;
+            box-shadow: 10px 10px 90px #f20044;
+            animation: animHeart .9s linear infinite;
+           left: 0%;
+            top: -80px;
+            }
+            
+            @keyframes animHeart{
+                0%{
+                    transform : rotate(-45deg) scale(1.07);
+                }
+                80%{
+                    transform: rotate(-45deg) scale(1);
+                }
+                100%{
+                    transform: rotate(-45deg) scale(.8);
+                }
+            }
+        
+            .heart::before{ 
+                content: '';
+                position: absolute;
+                height: 150px;
+                width: 150px;
+                background-color: #f20044;
+                box-shadow:-10px 10px 90px #f20044;
+                top: -50%;
+                border-radius: 50%;
+            }
+            .heart::after{
+                content: '';
+                position: absolute;
+                box-shadow: 10px -10px 90px #f20044;
+                height: 150px; 
+                width: 150px;
+                background-color: #f20844;
+                right: -50%;
+                 border-radius: 50%;
+                }
+                
+        body {
+            margin: 0px; position: relative;
+            display: flex;
+            align-items: center; justify-content: center;
+            background: #FF0099;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #ff00f2, #540264);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #110714, #660055); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+            }
+        
+        .button a {
+         text-decoration: none;
+         color: white;
+        }
+        .button {
+            --glow-color: rgb(217, 176, 255);
+            --glow-spread-color: rgba(191, 123, 255, 0.781);
+            --enhanced-glow-color: rgb(231, 206, 255);
+            --btn-color: rgb(100, 61, 136);
+            border: .25em solid var(--glow-color);
+            padding: 1em 3em;
+            color: var(--glow-color);
+            font-size: 25px;
+            font-weight: bold;
+            background-color: var(--btn-color);
+            border-radius: 1em;
+            outline: none;
+            box-shadow: e 8 1em .25em var(--glow-color), ee 4em lem var(--glow-spread-color),
+            inset 0 8.75em .25em var(--glow-color);
+            text-shadow: ee.5em var(--glow-color);
+            position: absolute;
+            transition: all 0.3s; 
+            text-align: center;
+            display: inline-block;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+          }
+          
+        
+        .button::after {
+            pointer-events: none;
+            content:"";
+            position: absolute;
+            top: 0%;
+            left: 0;
+            height: 0%;
+            width: 0%;
+            background-color: var(--glow-spread-color); 
+            filter: blur (2em);
+            opacity: .7;
+            transform: perspective (1.5em) rotatex (35deg) scale (1, .6);
+           }
+           .button:hover {
+            color: var(--btn-color);
+            background-color: var(--glow-color);
+            box-shadow: 0 0 1em .25em var(--glow-color),
+                      0 0 4em 2em var(--glow-spread-color),
+                      inset 0 0 .75em .25em var(--glow-color);
+                     
+           }
+           .button:active {
+            box-shadow: 0 0 0.6em .25em var(--glow-color),
+                   0 0 2.5em 2em var(--glow-spread-color),
+                    inset 0 0.5em .25em var(--glow-color);
+           }
+
+    
